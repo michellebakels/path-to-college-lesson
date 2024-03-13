@@ -1,5 +1,7 @@
 language = "html"
 run = "run"
+hidden = [".config"]
+modules = ["web:v2-20230623-0b7a606"]
 
 [languages]
 
@@ -23,3 +25,10 @@ pattern = "**/{*.less,*.scss,*.css}"
 
 [languages.css.languageServer]
 start = "vscode-css-language-server --stdio"
+
+[deployment]
+publicDir = "/"
+deploymentTarget = "static"
+
+[nix]
+channel = "stable-23_11"
